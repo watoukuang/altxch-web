@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ALTXCH｜全球领先的交易所源码系统</title>
+    <meta name="keyword"
+          content="区块链资产交易平台,交易所源码系统，渣渣币交易所，币币交易,数字货币交易所,虚拟货币账户,比特币交易系统,以太坊行情,莱特币走势,ALTXCH,ALTXCH官网,ALTXCH,ALTXCH,BTC价格,ETH钱包注册,LTC市价,杠杆期货,ALTXCH,数字货币"/>
+    <meta name="description"
+          content="ALTXCH is the world's leading digital currency trading platform, offering trading in Bitcoin, Ether, BNB, USDT and many other digital assets."/>
+    <meta property="og:title" content="ALTXCH | Bitcoin Trading Platform | Digital Currency Trading Platform"
+          class="next-head"/>
+    <meta property="og:site_name" content="ALTXCH" class="next-head"/>
+    <meta property="twitter:title" content="ALTXCH | Bitcoin Trading Platform | Digital Currency Trading Platform"
+          class="next-head"/>
+    <meta property="twitter:site" content="ALTXCH" class="next-head"/>
+    <meta property="twitter:card" content="summary_large_image" class="next-head"/>
+    <meta name="robots" content="index" class="next-head"/>
+    <meta property="og:description"
+          content="ALTXCH is the world's leading digital currency trading platform, offering trading in Bitcoin, Ether, BNB, USDT and many other digital assets."
+          class="next-head"/>
+    <meta property="twitter:description"
+          content="ALTXCH is the world's leading digital currency trading platform, offering trading in Bitcoin, Ether, BNB, USDT and many other digital assets."
+          class="next-head"/>
+    <link rel="icon" href="public/favicon.ico">
+    <style>
+        /* 移动端提示样式 */
+        .mobile-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #172636;
+            color: white;
+            z-index: 9999;
+            padding: 20px;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .mobile-message h1 {
+            color: #37ff18;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .mobile-message p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 80%;
+        }
+
+        .mobile-message .logo {
+            margin-bottom: 20px;
+            width: 120px;
+            height: auto;
+        }
+
+        .platform-name {
+            font-size: 48px;
+            font-weight: bold;
+            color: #37ff18;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(55, 255, 24, 0.5);
+        }
+
+        .platform-tagline {
+            font-size: 18px;
+            color: #00ffcc;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px rgba(0, 255, 204, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .countdown {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .download-tip {
+            margin-top: 30px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .mobile-message {
+                display: flex;
+            }
+
+            #app {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body style="background: #172636;">
+<!-- 移动端访问提示 -->
+<div class="mobile-message">
+    <img src="/logo.png" alt="ALTXCH Logo" class="logo">
+    <div class="platform-name">ALTXCH</div>
+    <div class="platform-tagline">全球领先的交易所源码系统</div>
+    <h1>请使用PC端访问</h1>
+    <p>为了获得最佳交易体验，ALTXCH交易平台建议使用桌面浏览器访问</p>
+    <div class="download-tip">您也可以联系客服获取移动端解决方案</div>
+</div>
+
+<div id="app"></div>
+<script type="module" src="/src/main.js"></script>
+<script>
+    // 检测移动设备并处理跳转
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    if (isMobileDevice()) {
+        document.getElementById('app').style.display = 'none';
+        document.querySelector('.mobile-message').style.display = 'flex';
+    }
+</script>
+</body>
+</html>
